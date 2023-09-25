@@ -1,5 +1,5 @@
 # Godot 4+ specific ignores
-godot/
+.godot/ForLearn
 
 # Godot-specific ignores
 .import/
