@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://soxv5rww12a7"]
+
+[ext_resource type="Script" path="res://Scripts/SnotBall.gd" id="1_bqfxf"]
+[ext_resource type="Texture2D" uid="uid://gyn3mlwj23bd" path="res://Art/SnotBall_32x32.png" id="1_dw046"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fsqk8"]
+radius = 5.0
+
+[node name="SnotBall" type="Area2D"]
+script = ExtResource("1_bqfxf")
+
+[node name="Visual" type="Sprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_dw046")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_fsqk8")

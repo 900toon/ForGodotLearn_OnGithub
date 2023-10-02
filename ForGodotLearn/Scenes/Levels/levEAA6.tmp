@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://cy0057jmhpxd4"]
+
+[ext_resource type="Texture2D" uid="uid://db4b7brr8vsl2" path="res://icon.svg" id="1_klpjf"]
+[ext_resource type="Script" path="res://Scripts/level.gd" id="1_whfqp"]
+[ext_resource type="Script" path="res://Scripts/GodotImage.gd" id="2_e3a5p"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_whfqp")
+
+[node name="GodotImage" type="Sprite2D" parent="."]
+texture = ExtResource("1_klpjf")
+script = ExtResource("2_e3a5p")
+
+[node name="Terrain" type="Node2D" parent="."]

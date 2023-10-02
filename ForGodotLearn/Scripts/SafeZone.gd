@@ -1,4 +1,6 @@
-extends Node2D
+extends StaticBody2D
+
+signal PlayerEnterSafeZone;
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,8 +13,5 @@ func _process(delta):
 	pass
 	
 
-
-
-func _on_area_block_enter_area_block(bodyA):
-	print("event subscriber catch the signal");
-	print(bodyA);
+func _on_area_2d_body_entered(body):
+	PlayerEnterSafeZone.emit();

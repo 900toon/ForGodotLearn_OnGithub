@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://cy0057jmhpxd4"]
+
+[ext_resource type="Script" path="res://Scripts/level.gd" id="1_whfqp"]
+[ext_resource type="PackedScene" uid="uid://bmlp1qp51nqbr" path="res://Scenes/Terrains/SafeZone.tscn" id="3_0f0qq"]
+[ext_resource type="PackedScene" uid="uid://d06lyequh00bd" path="res://Scenes/Character/Player.tscn" id="4_0tpct"]
+[ext_resource type="PackedScene" uid="uid://bf1f548lchk5x" path="res://Scenes/NotPlayerCharacters/creature_red_dot.tscn" id="4_8ddj6"]
+[ext_resource type="PackedScene" uid="uid://yhh1g724kmg5" path="res://Scenes/Terrains/Obstacle.tscn" id="4_nm3qp"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_whfqp")
+
+[node name="Terrain" type="Node2D" parent="."]
+
+[node name="Obstacle2" parent="Terrain" instance=ExtResource("4_nm3qp")]
+position = Vector2(789, 354)
+
+[node name="Obstacle" parent="Terrain" instance=ExtResource("4_nm3qp")]
+position = Vector2(626, 274)
+
+[node name="Obstacle3" parent="Terrain" instance=ExtResource("4_nm3qp")]
+position = Vector2(537, 383)
+
+[node name="SafeZone" parent="." instance=ExtResource("3_0f0qq")]
+position = Vector2(542, 466)
+
+[node name="SnotBallHolder" type="Node2D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("4_0tpct")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(2, 2)
+
+[node name="Creature_RedDot" parent="." instance=ExtResource("4_8ddj6")]
+position = Vector2(775, 272)
+rotation = 0.107543
+
+[node name="Creature_RedDot2" parent="." instance=ExtResource("4_8ddj6")]
+position = Vector2(633, 303)
+rotation = 0.169211
+
+[connection signal="PlayerEnterSafeZone" from="SafeZone" to="." method="_on_safe_zone_player_enter_safe_zone"]
+[connection signal="snotBall" from="Player" to="." method="_on_player_snot_ball"]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bf1f548lchk5x"]
+
+[ext_resource type="Script" path="res://Scripts/CreatureRedDot.gd" id="1_cfglb"]
+[ext_resource type="Texture2D" uid="uid://cgan8ck0og3fb" path="res://Art/RedFood_32x32.png" id="1_muf8a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8u7fd"]
+radius = 7.0
+
+[node name="Creature_RedDot" type="CharacterBody2D"]
+script = ExtResource("1_cfglb")
+
+[node name="Visual" type="Sprite2D" parent="."]
+texture = ExtResource("1_muf8a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8u7fd")
