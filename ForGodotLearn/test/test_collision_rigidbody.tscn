@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdwqtfneheorc"]
+
+[ext_resource type="Texture2D" uid="uid://c2urgmq8skctq" path="res://Art/SomeKindOfFireBall.png" id="1_sh7u4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_51urn"]
+radius = 14.0
+
+[node name="testCollisionRigidbody" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_sh7u4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_51urn")

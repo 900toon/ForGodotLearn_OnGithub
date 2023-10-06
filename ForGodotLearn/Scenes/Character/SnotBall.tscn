@@ -7,6 +7,8 @@
 radius = 5.0
 
 [node name="SnotBall" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_bqfxf")
 
 [node name="Visual" type="Sprite2D" parent="."]
@@ -15,3 +17,13 @@ texture = ExtResource("1_dw046")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_fsqk8")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 30
+emission_shape = 1
+emission_sphere_radius = 9.54
+direction = Vector2(1, 1)
+gravity = Vector2(0, 0)
+scale_amount_min = 0.1
+scale_amount_max = 1.5
+color = Color(0.117647, 0.85098, 0.752941, 0.611765)

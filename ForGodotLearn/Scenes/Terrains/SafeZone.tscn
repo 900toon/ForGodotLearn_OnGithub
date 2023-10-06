@@ -7,6 +7,8 @@
 size = Vector2(15, 31.5)
 
 [node name="SafeZone" type="StaticBody2D"]
+collision_layer = 8
+collision_mask = 0
 script = ExtResource("1_ch0gy")
 
 [node name="Visual" type="Sprite2D" parent="."]

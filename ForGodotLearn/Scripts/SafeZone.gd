@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-signal PlayerEnterSafeZone;
+
 
 
 # Called when the node enters the scene tree for the first time.
@@ -13,5 +13,7 @@ func _process(delta):
 	pass
 	
 
+
+signal PlayerEnterSafeZone(body);
 func _on_area_2d_body_entered(body):
-	PlayerEnterSafeZone.emit();
+	PlayerEnterSafeZone.emit(body);

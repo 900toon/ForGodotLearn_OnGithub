@@ -38,18 +38,25 @@ func HandleBehaviour():
 	if (coolDownTimer >= attackCoolDown):
 		check_and_attack();
 	
-	
+
+#signal Test_Signal(testObjectPosition, direction);
+#func Test():
+#	if (Input.is_action_pressed("Test")):
+#		var direction : Vector2 = (get_global_mouse_position() - global_position).normalized();
+#
+#		Test_Signal.emit($SnotSpawnPosition/a.global_position, direction)
+#		print("right click")
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	pass;
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta):
 	Move(delta);
 	HandleBehaviour();
 	HandleLookingDirection();
+#	Test();
 	pass
 	
