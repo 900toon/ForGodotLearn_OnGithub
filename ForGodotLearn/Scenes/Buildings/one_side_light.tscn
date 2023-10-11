@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwcfuecc4jvp"]
+
+[ext_resource type="Texture2D" uid="uid://bnid810asjw8v" path="res://Art/light_32x32.png" id="1_chev2"]
+[ext_resource type="Texture2D" uid="uid://bo71ndunuyp5f" path="res://Art/one_side_light_32x32.png" id="2_dlbso"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obvut"]
+size = Vector2(14.5, 6.75)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_agkm8"]
+polygon = PackedVector2Array(-6, 1, -1, 5, 1, 5, 6, 1, 7, -1, 4, 0, -3, 0, -7, -1)
+
+[node name="oneSideLight" type="StaticBody2D"]
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(0, -5.96046e-08)
+scale = Vector2(0.155, 0.155)
+texture = ExtResource("1_chev2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_dlbso")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, 0.625)
+shape = SubResource("RectangleShape2D_obvut")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -2)
+shadow_enabled = true
+shadow_filter = 1
+texture = ExtResource("1_chev2")
+texture_scale = 3.0
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_agkm8")

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmbxr8m107vvi"]
+
+[ext_resource type="Texture2D" uid="uid://bnid810asjw8v" path="res://Art/light_32x32.png" id="1_fr1d0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0svmc"]
+radius = 5.0
+
+[node name="LightSource" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_fr1d0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0svmc")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+texture = ExtResource("1_fr1d0")
+texture_scale = 3.0

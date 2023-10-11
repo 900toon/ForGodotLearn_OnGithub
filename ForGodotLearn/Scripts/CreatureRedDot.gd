@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const speed : float = 30.0;
+const speed : float = 90.0;
 
 var random = RandomNumberGenerator.new();
 func Movement():
