@@ -233,7 +233,7 @@ script = ExtResource("1_whfqp")
 [node name="Terrain" type="Node2D" parent="."]
 
 [node name="Background" type="Sprite2D" parent="Terrain"]
-position = Vector2(379, 365)
+position = Vector2(386, 355)
 texture = ExtResource("2_bfesq")
 region_enabled = true
 region_rect = Rect2(0, 0, 1000, 1000)
