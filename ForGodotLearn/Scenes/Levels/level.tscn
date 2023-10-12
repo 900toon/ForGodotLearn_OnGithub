@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://bf1f548lchk5x" path="res://Scenes/NotPlayerCharacters/creature_red_dot.tscn" id="4_8ddj6"]
 [ext_resource type="PackedScene" uid="uid://cf7qal4a3k0r3" path="res://Scenes/Buildings/lab_room.tscn" id="4_kn23s"]
 [ext_resource type="PackedScene" uid="uid://yhh1g724kmg5" path="res://Scenes/Terrains/Obstacle.tscn" id="4_nm3qp"]
-[ext_resource type="PackedScene" uid="uid://dmbxr8m107vvi" path="res://Scenes/Buildings/light_source.tscn" id="5_7qokb"]
-[ext_resource type="PackedScene" uid="uid://dwcfuecc4jvp" path="res://Scenes/Buildings/one_side_light.tscn" id="7_mlwth"]
+[ext_resource type="PackedScene" path="res://Scenes/Buildings/light_source.tscn" id="5_7qokb"]
+[ext_resource type="PackedScene" path="res://Scenes/Buildings/one_side_light.tscn" id="7_mlwth"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_seqvo"]
 texture = ExtResource("3_lkqpa")
